@@ -6,16 +6,10 @@ import (
 
 // Deploy todoapp
 #Deploy: {
-	app: {
-		name:  string | *"dagger-todoapp"
-		build: #Build
-	}
+	_build: #Build
 
-	url: target.netlify.url
-
-	// Deployment target
-	target: "netlify": netlify.#Deploy & {
-		contents: app.build.output
-		site:     app.name
+	netlify.#Deploy & {
+		contents: _build.output
+		site:     string | *"dagger-todoapp"
 	}
 }

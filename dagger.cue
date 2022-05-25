@@ -16,8 +16,8 @@ dagger.#Plan & {
 		build:  #Build
 		test:   #Test
 		deploy: #Deploy & {
-			target: netlify: token: client.env.NETLIFY_TOKEN
-			app: name: "\(client.env.USER)-dagger-todoapp"
+			token: client.env.NETLIFY_TOKEN
+			site:  "\(client.env.USER)-dagger-todoapp"
 		}
 	}
 }
