@@ -1,1 +1,1 @@
-module: "github.com/shykes/todoapp"
+module: "github.com/dagger/todoapp"
